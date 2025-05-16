@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button'; // Ajusta la ruta si está en otra carpeta
+import Button from './Button'; 
 
 function AddItem({ products, quantities, onAdd }) {
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 import Summary from "../components/Summary";
+import SavePurchase from "../components/SavePurchase";
 
 function CheckoutSidebar({ isOpen, onClose, items, customerName, setCustomerName }) {
   return (
@@ -13,15 +14,14 @@ function CheckoutSidebar({ isOpen, onClose, items, customerName, setCustomerName
         <input
           type="text"
           value={customerName}
-          onChange={(e) => setCustomerName(e.target.value)}
+          onChange={e => setCustomerName(e.target.value)}
           placeholder="Ingresa tu nombre"
-          className="w-full p-2 rounded bg-gray-800 text-white border border-gray-600"
+          className="w-full p-2 rounded bg-gray-800 text-white border border-white"
         />
-        <Summary items={items} customerName={customerName} />
+        <SavePurchase items={items} customerName={customerName} />
       </div>
     </div>
   );
 }
 
 export default CheckoutSidebar;
-

@@ -4,7 +4,7 @@ function ItemList({ items, onDelete, onUpdateQuantity }) {
   return (
     <div className="mt-6 space-y-4">
       {items.length === 0 ? (
-        <p className="text-gray-400">No hay productos agregados.</p>
+        <p className="text-gray-400">Vacio.</p>
       ) : (
         items.map((item, index) => {
           const quantity = item.quantity || 1;
