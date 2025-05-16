@@ -1,13 +1,18 @@
-import React from "react"
+import React from 'react';
 
-//boton reutilizable
-function Button({ children, onClick, className }) { 
-    return (
-        <button onClick={onClick} type="button" className={`bg-blue-500 text-white font-bold py-2 px-4 rounded ${className}`} >
-            {children}
-        </button>
-    )
+function Button({ children, onClick, type = 'button', className = '', disabled = false }) {
+  return (
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={`px-4 py-2 rounded-xl font-semibold transition 
+        ${disabled ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600 text-white'} 
+        ${className}`}
+    >
+      {children}
+    </button>
+  );
 }
 
-export default Button
-
+export default Button;
